@@ -111,18 +111,7 @@ public class RPG extends Canvas implements Runnable, KeyListener {
     public int getScreenHeight() { return SCREEN_HEIGHT; }
     public Random getRandom() { return random; }
 
-    @Override
-    public void keyTyped(KeyEvent e) {
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-        keys[e.getKeyCode()] = true;
-        //if (keys[KeyEvent.VK_LEFT])
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-        keys[e.getKeyCode()] = false;
-    }
+    @Override public void keyTyped(KeyEvent e) {}
+    @Override public void keyPressed(KeyEvent e) { keys[e.getKeyCode()] = true; }
+    @Override public void keyReleased(KeyEvent e) { keys[e.getKeyCode()] = false; }
 }
